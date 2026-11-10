@@ -1,0 +1,67 @@
+# =============================================================================
+# Root .gitignore - SnackCheck Project
+# =============================================================================
+
+# --- Environment & Sensitive Data ---
+.env
+.env.backup
+.env.production
+**/.env
+**/.env.*
+!**/.env.example
+
+# --- Python ---
+python-api/venv/
+python-api/.venv/
+**/venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pkl.bak
+.pytest_cache/
+
+# --- Duplicate / Backup folder inside python-api ---
+python-api/snackv1/
+
+# --- Laravel (snackv1) ---
+snackv1/vendor/
+snackv1/node_modules/
+snackv1/public/storage
+snackv1/public/build/
+snackv1/public/hot/
+snackv1/storage/*.key
+snackv1/storage/framework/cache/data/*
+!snackv1/storage/framework/cache/data/.gitignore
+snackv1/storage/framework/sessions/*
+!snackv1/storage/framework/sessions/.gitignore
+snackv1/storage/framework/testing/*
+!snackv1/storage/framework/testing/.gitignore
+snackv1/storage/framework/views/*
+!snackv1/storage/framework/views/.gitignore
+snackv1/storage/logs/*
+!snackv1/storage/logs/.gitignore
+snackv1/database/*.sqlite*
+.phpunit.result.cache
+
+# --- Archives & Backups ---
+*.zip
+*.tar.gz
+*.rar
+*.7z
+* - Copy.*
+* - Copy (*)
+* - Salinan.*
+
+# --- IDEs & OS ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+npm-debug.log
+yarn-error.log
